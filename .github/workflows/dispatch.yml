@@ -1,0 +1,10 @@
+name: CRON
+on: workflow_dispatch:
+  # schedule:
+  #   - cron: "*/1 * * * *"
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Printing
+        run: echo "Hello World"
