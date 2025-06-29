@@ -1,4 +1,4 @@
-name: CRON
+name: DISPATCH
 on: 
   workflow_dispatch:
 jobs:
