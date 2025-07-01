@@ -3,6 +3,9 @@ on:
   workflow_dispatch:
 jobs:
   deploy:
+    concurrency:
+      group: deployment
+      cancel-in-progress: true
     runs-on: ubuntu-latest
     steps:
     - name: Docker Login
