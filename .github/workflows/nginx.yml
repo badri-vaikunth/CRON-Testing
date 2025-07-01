@@ -13,4 +13,6 @@ jobs:
     - name: Nginx Creation
       run: docker run --name my-nginx -p 8080:80 -d nginx
     - name: Running Containers
-      run: docker ps -a
+      run: |
+        docker ps -a
+        sleep 100s
