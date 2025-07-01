@@ -5,7 +5,7 @@ jobs:
   deploy:
     concurrency:
       group: deployment
-      cancel-in-progress: true
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     steps:
     - name: Docker Login
@@ -16,6 +16,7 @@ jobs:
     - name: Nginx Creation
       run: docker run --name my-nginx -p 8080:80 -d nginx
     - name: Running Containers
+      timeout-minutes: 1
       run: |
         docker ps -a
         sleep 100s
